@@ -22,13 +22,13 @@ app.listen(4500);
 app.get('/', function(req, res){
     res.sendFile(__dirname + './')
 })
-// app.post('/', function(req, res){
-//     connections.query("select * from user where user_name = ? and password = ?", function(err, results, fields){
-//         if(results.length > 0){
-//             res.redirect('/homepage.html');
-//         }
-//         else{
+app.post('/', function(req, res){
+    connections.query("select * from user where user_name = ? and password = ?", function(err, results, fields){
+        if(results.length > 0){
+            res.redirect('/homepage.html');
+        }
+        else{
 
-//         }
-//     });
-// })
+        }
+    });
+})
