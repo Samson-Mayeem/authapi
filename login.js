@@ -28,10 +28,11 @@ app.get('/', function(req, res){
 app.post('/', encoder, function(req, res){
     var email = req.body.email;
     var password = req.body.password;
-    connection.query("select * from user where email = ? and password = ?", [email, password], function(err, results, fields){
+    connection.query("select * from login_tb where email = ? and password = ?", [email, password], function(err, results, fields){
         if(results.length > 0){
             res.redirect('/home');
         }
+        else if(err)throw err;
         else{
             res.redirect("/");
         }
