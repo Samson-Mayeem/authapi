@@ -31,8 +31,7 @@ app.post('/', encoder, function(req, res){
     connection.query("select * from login_tb where email = ? and password = ?", [email, password], function(err, results, fields){
         if(results.length > 0){
             res.redirect('/home');
-        }
-        else if(err)throw err;
+        }else if(err)throw err;
         else{
             res.redirect("/");
         }
