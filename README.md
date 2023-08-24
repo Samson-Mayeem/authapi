@@ -9,4 +9,4 @@
 #To install packages, one needs to use the node package installer(npm) to install various packages.
 
 #NOTES
-# Let me know how easy you find it is to understand my simple structure of API in the comment section of this repository.
+Let me know how easy you find it is to understand my simple structure of API in the comment section of this repository.
